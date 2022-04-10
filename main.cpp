@@ -102,8 +102,9 @@ namespace map
 
                 if (Pipes[i]->getPosition().x + PipeWidth < 0.f)
                 {
-                    Pipes.erase(Pipes.begin() + 0);
-                    Pipes.erase(Pipes.begin() + 0);
+                    delete Pipes[0];
+                    Pipes.erase(Pipes.begin());
+                    Pipes.erase(Pipes.begin());
                     CurrentPipe--;
                     i -= 2;
                 }
